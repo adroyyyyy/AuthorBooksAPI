@@ -15,4 +15,3 @@ namespace AuthorBooksAPI.Domain.Entities
         public List<Author> Authors { get; set; } = new();
     }
 }
-}
