@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AuthorBooksAPI.Domain.Common
+namespace AuthorBooksAPI.Application.Common
 {
     public class BaseDto
     {

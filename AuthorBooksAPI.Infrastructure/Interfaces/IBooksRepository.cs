@@ -1,5 +1,4 @@
-﻿using AuthorBooksAPI.Domain.DTO;
-using AuthorBooksAPI.Domain.Entities;
+﻿using AuthorBooksAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

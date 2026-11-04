@@ -1,9 +1,9 @@
-﻿using AuthorBooksAPI.Domain.Common;
+﻿using AuthorBooksAPI.Application.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AuthorBooksAPI.Domain.DTO
+namespace AuthorBooksAPI.Application.DTO
 {
     public class AuthorDto : BaseDto
     {

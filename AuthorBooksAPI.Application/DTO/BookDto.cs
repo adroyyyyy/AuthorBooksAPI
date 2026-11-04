@@ -1,11 +1,11 @@
-﻿using AuthorBooksAPI.Domain.Entities;
+﻿using AuthorBooksAPI.Application.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AuthorBooksAPI.Domain.DTO
+namespace AuthorBooksAPI.Application.DTO
 {
-    public class BookDto
+    public class BookDto : BaseDto
     {
         public int BookId { get; set; }
         public string Title { get; set; }
