@@ -1,3 +1,10 @@
+using AuthorBooksAPI.Application.Implementations;
+using AuthorBooksAPI.Application.Interfaces;
+using AuthorBooksAPI.Infrastructure;
+using AuthorBooksAPI.Infrastructure.Implementations;
+using AuthorBooksAPI.Infrastructure.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +12,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+
+builder.Services.AddScoped<IBooksService, BooksService>();
+builder.Services.AddScoped<IBooksRepository, BooksRepository>();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AuthorBooksAPIDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
